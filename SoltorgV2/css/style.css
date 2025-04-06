@@ -94,31 +94,76 @@ textarea {
     padding: 0;
    }
 
-   header h1.prime {
+   body {
+    width: 100%;
+    height: 100%;
+
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-rows: auto 1fr auto;
+   }
+
+   header {
+   }
+
+   header .prime {
     background-color: var(--soltorg-gul);
     width: 100%;
     height: 15vh;
    }
 
-   header h2.sub {
+   header .prime img {
+    height: 100%;
+    grid-column: 2 / 3;
+
+   }
+
+   header .sub {
     background-color: grey;
     width: 100%;
     height: 8vh;
    }
 
-   header h3.top-liner {
+   header .top-liner {
     background-color: antiquewhite;
     width: 100%;
     height: 3vh;
    }
 
-   header div.background {
-    width: 100%;
-    height: 50vh;
+   header,
+   .prime,
+   .sub,
+   .top-liner {
+    grid-column: span 3;
+   }
+
+   header > * {
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+
+   }
+
+
+   div.background {
+    height: 60vh;
+    background-color: blueviolet;
     background-image: url("../img/Soltorgsgymnasiet.jpg");
     background-repeat: no-repeat;
     background-size: 100%;
-    background-position: 50%;
+    background-position: center 70%;
+
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+   }
+
+   main {
+    min-height: 200px;
+    max-height: auto;
+
+    background-color: pink;
+
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
    }
 
 /* ==========================================================================
