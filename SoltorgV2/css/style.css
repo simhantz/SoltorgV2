@@ -87,11 +87,21 @@ textarea {
    :root {
     --soltorg-gul: #FFdb00;
     --soltorg-mörkgul: #FFD239;
+    --better-white: #fffbe8; /*#fffbe3;*/
    }
 
    * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+
+    /* font-family: 'Actor', sans-serif; */
+    font-family: 'Alegreya Sans SC', sans-serif;
+
+   }
+
+   html {
+    background-color: var(--better-white);
    }
 
    body {
@@ -100,40 +110,79 @@ textarea {
 
     display: grid;
     grid-template-columns: 1fr 4fr 1fr;
-    grid-template-rows: auto 1fr auto;
+    grid-template-rows: auto 1fr auto 20vh;
    }
 
    header {
+    font-weight: 500;
+    font-size: 150%;
    }
 
-   header .prime {
-    background-color: var(--soltorg-gul);
+   header .mid-row {
+    background-color: var(--soltorg-mörkgul);
     width: 100%;
-    height: 15vh;
+    max-height: 15vh;
    }
 
-   header .prime img {
-    height: 100%;
+   header .mid-row img {
+    max-height: inherit;
+
+   }
+
+   header .mid-row nav {
+    display: grid;
+    grid-template-columns: auto 4fr 1fr;
+    align-items: center;
+
+    gap: 5vh;
+
+    max-height: inherit;
     grid-column: 2 / 3;
 
    }
 
-   header .sub {
-    background-color: grey;
-    width: 100%;
-    height: 8vh;
+   header .list {
+    display: flex;
+    list-style: none;
+    gap: 1vw;
+    
    }
 
-   header .top-liner {
-    background-color: antiquewhite;
+   header .bottom-row {
+    background-color: var(--soltorg-gul);
+    width: 100%;
+    height: 8vh;
+    border-top: var(--better-white) solid 2px;
+
+   }
+
+   header .bottom-row nav {
+    grid-column: 2 / 3;
+    align-self: center;
+    color: black;
+   }
+
+   header .bottom-row .list {
+    justify-content: space-around;
+   }
+
+   header .top-row {
+    background-color: var(--better-white);
     width: 100%;
     height: 3vh;
    }
 
+   header .top-row nav {
+
+    gap: 10vh;
+
+    grid-column: 2 / 3;
+   }
+
    header,
-   .prime,
+   .mid-row,
    .sub,
-   .top-liner {
+   .top-row {
     grid-column: span 3;
    }
 
@@ -145,25 +194,64 @@ textarea {
 
 
    div.background {
-    height: 60vh;
-    background-color: blueviolet;
-    background-image: url("../img/Soltorgsgymnasiet.jpg");
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-position: center 70%;
+    margin-block: 5vh;
 
     grid-column: 2 / 3;
     grid-row: 2 / 3;
    }
 
+   div.background img {
+    max-width: 100%;
+    height: auto;
+    width: auto\9;
+   }
+
    main {
-    min-height: 200px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+
+    min-height: 500px;
     max-height: auto;
 
     background-color: pink;
 
     grid-column: 2 / 3;
     grid-row: 3 / 4;
+
+   }
+
+   main > article {
+    grid-column: span 4;
+    width: 70%;
+    /* background-color: #999; */
+    justify-self: center;
+    text-align: justify;
+   }
+
+   main > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: orange;
+    grid-column: span 4;
+   }
+
+   main > div div {
+    min-height: 200px;
+    width: 300px;
+    text-align: center;
+    align-content: center;
+    margin-inline: 2vw;
+
+  }
+
+   footer {
+    background-color:#f7f2d9;
+    margin-top: 5vh;
+    grid-row: 4 / 4;
+    grid-column: span 3;
+
    }
 
 /* ==========================================================================
