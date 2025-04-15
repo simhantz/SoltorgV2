@@ -275,26 +275,36 @@ textarea {
   }
 
   main .extra {
-    background-color: #222;
-
-    width: 15vw;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 1fr 8fr;
+    
+    border: #222 solid 2px;
+    width: 20vw;
     grid-column: 4 / 5;
     grid-row: 4 / 5;
   }
 
   main .extra .facebook {
     height: 20%;
-    background-color: brown;
+    grid-row: 1 / 2;
+    /* background-color: brown; */
   }
 
-  
-  main .extra .size {
-    background-color: cadetblue;
+  main .extra h2 {
+    align-content: end;
     height: 100%;
-
   }
+
+  main .extra .map {
+    background-color: #FFdb00;
+    grid-row: 3 / 4;
+    padding: 1vw;
+    padding-top: 0;
+  }
+
   main .extra iframe {
-    width: 100%;
+    max-width: 100%;
     height: 100%;
   }
 
