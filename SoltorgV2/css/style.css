@@ -210,7 +210,7 @@ textarea {
    main {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: auto auto 1fr auto 1fr;
+    grid-template-rows: auto auto auto auto 1fr;
 
     row-gap: 1vw;
 
@@ -260,6 +260,16 @@ textarea {
     aspect-ratio: 4/3;
   }
 
+  main .buttons .program {
+    background: url("../img/programBild.png");
+    background-position: top;
+  }
+
+  main .buttons .läxhjälp {
+    background: url("../img/läxhjälpBild.png");
+    background-position: top;
+  }
+
   main .video {
     width: 45vw;
     aspect-ratio: 16/9; 
@@ -280,7 +290,7 @@ textarea {
     grid-template-rows: 2fr 1fr 8fr;
     
     border: #222 solid 2px;
-    width: 20vw;
+    width: 100%;
     grid-column: 4 / 5;
     grid-row: 4 / 5;
   }
@@ -306,6 +316,31 @@ textarea {
   main .extra iframe {
     max-width: 100%;
     height: 100%;
+  }
+
+  main .kontakter {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr;
+
+    background-color: #999;
+
+  }
+
+  main .kontakter .rektorer {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
+
+  main .kontakter .rektorer div,
+  main .kontakter .övriga div
+  {
+    margin-bottom: 5vh;
+  }
+
+  main .kontakter .övriga {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
   }
 
   footer {
