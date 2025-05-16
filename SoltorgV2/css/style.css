@@ -88,6 +88,8 @@ textarea {
     --soltorg-gul: #FFdb00;
     --soltorg-mörkgul: #FFD239;
     --better-white: #fffbe8; /*#fffbe3;*/
+    --accent-white: #f3eccc;
+    --border-white: #f4eabc;
    }
 
    * {
@@ -212,12 +214,12 @@ textarea {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: auto auto auto auto 1fr;
 
-    row-gap: 1vw;
+    row-gap: 8vh;
 
     min-height: 500px;
     max-height: auto;
 
-    background-color: pink;
+    /* background-color: pink; */
 
     grid-column: 2 / 3;
     grid-row: 3 / 4;
@@ -226,56 +228,64 @@ textarea {
 
    main * {
     grid-column: span 4;
+    
    }
-
+/* 
    main h1 {
-    margin-left: 1vw;
     font-size: 4vw;
     font-weight: 500;
-   }
+   } */
 
    main .info {
-    width: 70%;
-    /* background-color: #999; */
-    margin-left: 1vw;
+    justify-self: center;
+
+    background-color: var(--accent-white);
+    /* margin-left: 1vw; */
 
     align-self: center;
     text-align: justify;
+    font-size: larger;
    }
 
    main .buttons {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: orange;
-    padding-inline: 2vw;
+    justify-content: space-between;
+    /* padding-inline: 2vw; */
+    gap: 2vw;
+    max-width: 100%;
+    /* background-color: #000; */
+
    }
 
    main .buttons div {
-    width: 30vw;
-    text-align: center;
-    align-content: center;
-    margin-inline: 2vw;
-
-    aspect-ratio: 4/3;
+    background-color: var(--accent-white);
+    border: var(--border-white) solid 1px;
+  }
+  main .buttons div img{
+    max-width: 100%;
+    max-height: 100%;
   }
 
-  main .buttons .program {
-    background: url("../img/programBild.png");
-    background-position: top;
+  main .buttons .programimage {
+
   }
 
   main .buttons .läxhjälp {
-    background: url("../img/läxhjälpBild.png");
-    background-position: top;
+
+  }
+
+  main .buttons .kontakt {
+
   }
 
   main .video {
     width: 45vw;
     aspect-ratio: 16/9; 
 
-    grid-column: 1 / 3;
+    grid-column: 1 / 4;
     grid-row: 4 / 5;
+
+    background-color: var(--accent-white);
 
   }
 
@@ -289,16 +299,18 @@ textarea {
     grid-template-columns: 1fr;
     grid-template-rows: 2fr 1fr 8fr;
     
-    border: #222 solid 2px;
+    border: var(--border-white) solid 1px;
     width: 100%;
     grid-column: 4 / 5;
     grid-row: 4 / 5;
+    height: 90%;
+    align-self: center;
   }
 
   main .extra .facebook {
-    height: 20%;
+    height: 100%;
     grid-row: 1 / 2;
-    /* background-color: brown; */
+    background-color: var(--accent-white);
   }
 
   main .extra h2 {
@@ -307,7 +319,7 @@ textarea {
   }
 
   main .extra .map {
-    background-color: #FFdb00;
+    /* background-color: #FFdb00; */
     grid-row: 3 / 4;
     padding: 1vw;
     padding-top: 0;
@@ -323,7 +335,7 @@ textarea {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto 1fr;
 
-    background-color: #999;
+    background-color: var(--accent-white)
 
   }
 
