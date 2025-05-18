@@ -1,12 +1,12 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html class="no-js" lang="sv">
 
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title></title>
+  <title>Soltorgsgymnasiet</title>
   <link rel="stylesheet" href="css/style.css">
-  <meta name="description" content="">
+  <meta name="description" content="Soltorgs inte så officiella hemsida">
 
   <meta property="og:title" content="">
   <meta property="og:type" content="">
@@ -18,8 +18,6 @@
   <link rel="icon" href="/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="icon.png">
 
-  <link rel="preconnect" href="https://fonts.bunny.net">
-  <link href="https://fonts.bunny.net/css?family=abeezee:400|arsenal:400,400i,700,700i" rel="stylesheet" />
 
   <link rel="preconnect" href="https://fonts.bunny.net">
   <link href="https://fonts.bunny.net/css?family=actor:400|alegreya-sans-sc:300,400,500,700,800" rel="stylesheet" />
@@ -44,7 +42,9 @@
 
     <div class="mid-row">
       <nav>
-        <img src="img/soltorglogo.jpg" alt="soltorg logotyp">
+        <div>
+          <img src="/img/soltorglogo-desktop.jpg" alt=""/>
+        </div>
         <ol class="list">
           <li>Utbildning</li>
           <li>Är elev</li>
@@ -63,7 +63,7 @@
       <nav>
         <ol class="list">
           <li>Natur</li>
-          <li>Teknik</li>
+          <li><a href="/program/teknik.html">Teknik</a></li>
           <li>Hum</li>
         </ol>  
       </nav>
@@ -74,7 +74,11 @@
   </header>
 
   <div class="background">
-    <img src="../img/SoltorgsgymnasietLessSmaller.jpg" alt="bild på soltorg">
+    <picture>
+      <!-- <source media="(min-width: 650px)" srcset="../img/SoltorgsgymnasietLessSmaller.jpg"> -->
+      <!-- <source media="(min-width: 465px)" srcset="../img/Soltorg-min.jpg"> -->
+      <img src="../img/soltorg-desktop.jpg" alt="bild på soltorg">
+    </picture>
   </div>
 
   <main>
@@ -86,41 +90,46 @@
 
     <div class="buttons">
       <div class="program">
-        <img src="../img/programBild.png" alt="">
-        <h2>Program</h2>
+        <div>
+          <img src="../img/programBild.png" alt="">
+        </div>
+        <h2>Program ></h2>
       </div>
       <div class="läxhjälp">
-        <img src="../img/läxhjälpBild.png" alt="">
-        <h2>Läxhjälp</h2>
+        <div>
+          <img src="../img/läxhjälpBild.png" alt="">
+        </div>
+        <h2>Läxhjälp ></h2>
       </div>
       <div class="kontakt">
-        <img src="../img/hand.png" alt="">
-        <h2>Kontakt</h2>
+        <div>
+          <img src="../img/hand.png" alt="">
+        </div>
+        <h2>Kontakt ></h2>
       </div>
     </div>
 
     <div class="video">
       <h2>Om oss</h2>
       <p>Se filmen för att få en inblick i våra program och hur det är att gå på Soltorg.</p>
-      <iframe width="560" height="315" 
-        src="https://www.youtube.com/embed/W5dH8JeIwvI?si=2bDYsSw58IXHUl65&amp;controls=0" title="YouTube video player"  
-        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+      <iframe title="YouTube video player" loading="lazy"
+        src="https://www.youtube.com/embed/W5dH8JeIwvI?si=2bDYsSw58IXHUl65" frameborder="0">
       </iframe>
     </div>
 
     <div class="extra">
       <div class="facebook">
-        Följ oss på Facebook!
-        <a href="https://www.facebook.com/Soltorgsgymnasiet/"><h3>Soltorg</h3></a>
+        <h1>Följ oss på Facebook!</h1>
+        <a href="https://www.facebook.com/Soltorgsgymnasiet/"><h2>Soltorg</h2></a>
       </div>
-      <h2>Hitta oss</h2>
+      <h2>Hitta hit - Masergatan 20</h2>
       <div class="map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3930.25161906875!2d15.416297!3d60.492653!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46677e8e0bceddb5%3A0x1c00990e648ac44!2sSoltorgsgymnasiet!5e0!3m2!1ssv!2sse!4v1744578511478!5m2!1ssv!2sse" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe title="google maps" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3930.25161906875!2d15.416297!3d60.492653!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46677e8e0bceddb5%3A0x1c00990e648ac44!2sSoltorgsgymnasiet!5e0!3m2!1ssv!2sse!4v1744578511478!5m2!1ssv!2sse" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </div>
 
     <div class="kontakter">
-      <h2>Kontakta Oss</h2>
+      <h1>Kontakta Oss</h1>
 
       <div class="rektorer">
         <div>
@@ -164,43 +173,24 @@
   </main>
 
   <footer>
+    <div>
+      <h3>Kontakt</h3>
+      <p>Telefon: 0243-744 92</p>
+      <p>Besöksadress: Masergatan 20</p>
+    </div>
 
-KTH
+    <div>
+      <h3>Sociala medier</h3>
+      <p>Facebook</p>
+    </div>
 
-    Utbildning
-    Forskning
-    Samverkan
-    Om KTH
-    Student på KTH
-    Alumni
-    KTH Intranät
-
-Organisation
-
-    KTH Biblioteket
-    KTH:s skolor
-    Rektor och ledning
-    KTH:s verksamhetsstöd
-
-Tjänster
-
-    Schema
-    Kurs-, program- och gruppwebbar
-    Lärplattformen Canvas
-    Webbmejl
-
-Kontakt
-
-KTH
-100 44 Stockholm
-+46 8 790 60 00
-
-    Kontakta KTH
-    Jobba på KTH
-    Press och media
-    Faktura och betalning KTH
-    Om KTH:s webbplatser
-    Tillgänglighetsredogörelse
+    <div>
+      <h3>Om webbplatsen</h3>
+      <p>Om borlange.se </p>
+      <p>Press- och informationsmaterial</p>
+      <p>Hantering av personuppgifter</p>
+      <p>Tillgänglighetsredogörelse</p>
+    </div>
 
 </footer>
 
