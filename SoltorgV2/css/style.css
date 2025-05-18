@@ -99,6 +99,7 @@ textarea {
     --html: #fcf9ee;
     --main: #f5ecc9;
     --footer: #302f2d;
+    --desktop-width: 1300px;
    }
 
    * {
@@ -115,155 +116,139 @@ textarea {
 
    html {
     background-color: var(--html);
-    font-size: 1vh;
+    font-size: 16px;
    }
 
    body {
-    display: grid;
-    grid-template-columns: 1fr 4fr 1fr;
-    grid-template-rows: auto 1fr auto 30vh;
+    padding-inline: 3vw;
    }
 
+
+
+
    header {
-    font-weight: 500;
-    font-size: 3rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2rem 6rem 3rem;
+    margin-inline: -3vw;
+
+   }
+
+   header nav {
+    max-width: var(--desktop-width);
+    margin-inline: auto;
+    min-height: 100%;
+
+    align-content: center;
+    align-items: center;
+   }
+
+   header nav ol {
+    display: flex;
+    list-style: none;
+    gap: 0.5em;
    }
 
    header .top-row {
-    align-items: center;
-    height: 5rem;
-    font-size: 2rem;
+    grid-area: 1 / 1 / 1 / 4;
+   }
+   header .mid-row {
+    background-color: var(--soltorg-gul);
+    grid-area: 2 / 1 / 3 / 4;
+   }
+   header .bottom-row {
+    border-top: var(--html) solid 1px;
+    background-color: var(--soltorg-mörkgul);
+    grid-area: 3 / 1 / 4 / 4;
    }
 
    header .top-row nav {
-    grid-column: 2 / 3;
+    font-size: 1.2rem;
    }
-
-   header .mid-row {
-    max-height: 15rem;
-    min-height: 15rem;
-
-    background-color: var(--soltorg-mörkgul);
-   }
-
-   header .mid-row img {
-    max-height: inherit;
-   }
-
    header .mid-row nav {
-    display: grid;
-    align-items: center;
-    gap: 5vh;
-    grid-template-columns: auto 4fr 1fr;
-    grid-column: 2 / 3;
-    max-height: inherit;
-   }
-
-   header .mid-row nav div {
-    background-color: var(--loading);
-    height: 15rem;
-    width: 15rem;
-    overflow: hidden;
-   }
-   header .mid-row nav img {
-    height: 100%;
-   }
-
-   header .list {
     display: flex;
-    gap: 1vw;
+    /* background-color: brown; */
 
-    list-style: none;
+    justify-content: space-between;
+    font-size: 1.8rem;
    }
-
-   header .bottom-row {
-    height: 8vh;
-
-    background-color: var(--soltorg-gul);
-    border-top: var(--better-white) solid 2px;
-   }
-
    header .bottom-row nav {
-    align-self: center;
-    grid-column: 2 / 3;
+    font-size: 1.4rem;
    }
 
-   header .bottom-row .list {
+   header .mid-row picture {
+    max-width: 6rem;
+    width: 6rem;
+    /* background-color: var(--loading); */
+   }
+   header .mid-row picture img {
+    display: block;
+    max-width: 100%;
+   }
+
+   
+   header .mid-row #desktop-menu{
+    gap: 2em;
+   }
+   header .bottom-row nav ol{
     justify-content: space-around;
    }
 
-   header .bottom-row .list li:nth-child(2) {
-    border-inline: var(--accent) solid 2px; 
-    padding-inline: 20rem;
+   #mobile-menu {
+    display: none;
    }
 
 
 
-   header,
-   .mid-row,
-   .sub,
-   .top-row {
-    grid-column: span 3;
-   }
 
-   header > * {
-    display: grid;
-    grid-template-columns: 1fr 4fr 1fr;
-   }
-
-
-   div.background {
-    grid-column: 2 / 3;
-    grid-row: 2 / 3;
+   
+   section.background {
     margin-top: 3vh;
-    max-width: 100%;
-    height: 60vh;
 
-    background-color: var(--loading);
-    overflow: hidden;
+    max-width: var(--desktop-width);
+    margin-inline: auto;
+
+    aspect-ratio: 14/6;
    }
 
-  div.background img {
-    height: 100%;
+   section.background img {
+    display: block;
+    max-width: 100%;
+   }
 
-    border-radius: 0.3rem;
 
-  }
+
 
   main {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: auto auto 1fr auto auto;
-    grid-column: 2 / 3;
-    grid-row: 3 / 4;
     min-height: 500px;
     max-height: auto;
     padding-inline: 1vw;;
+
+    max-width: var(--desktop-width);
+    margin-inline: auto;
 
     row-gap: 10vh;
     background-color: var(--main);
 
     margin-block: 3vh;
     border-radius: 0.3rem;
-
   }
-
   main > * {
     grid-column: span 4;
   }
 
   main p,
   main h2 {
-    font-size: 2rem;
+    font-size: 1rem;
   }
-
   main,
-  div.background img,
+  section.background img,
   main .buttons div {
     border-radius: 0.3rem;
   }
-
-
   main .info,
   main .kontakter {
     margin-inline: -1vw;
@@ -271,43 +256,46 @@ textarea {
     font-size: 2rem;
   }
 
+
   main .info {
     justify-self: center;
     align-self: center;
     padding: 2vw;
-    margin-top: 10vh;
 
   }
-
   main .buttons {
     display: flex;
     justify-content: space-between;
-    gap: 2vw;
-    max-width: 100%;
+    gap: 3rem;
+    /* background-color: red; */
+    
   }
-
   main .buttons > div {
-    max-width: 30%;
-
     border: var(--accent-border);
     background-color: var(--accent);
+    flex: 1;
 
+
+    /* min-width: calc(var(--desktop-width) / 4); */
+
+
+  }
+  main .buttons > div div {
+    background-color: var(--loading);
+    aspect-ratio: 2 / 1;
     overflow: hidden;
   }
-  main .buttons div h2 {
-    height: 3em;
-    padding-inline: 1rem;
+  main .buttons h2 {
+    padding-inline: 0.5rem;
     padding-top: 1rem;
+    padding-bottom: 3vw;
   }
-  main .buttons div div {
+  main .buttons img{
+    display: block;
     max-width: 100%;
-    width: 40rem;
-    height: 25rem;
-    background-color: var(--loading);
+    margin: auto;
   }
-  main .buttons div div img{
-    max-height: 100%;
-  }
+  
   main .video {
     grid-column: 1 / 4;
     grid-row: 3 / 4;
@@ -374,8 +362,6 @@ textarea {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto 1fr;
     padding: 2vw;
-
-
   }
 
   main .kontakter .rektorer {
@@ -396,9 +382,8 @@ textarea {
   footer {
     display: flex;
     justify-content: space-evenly;
-    grid-column: span 3;
-    grid-row: 4 / 4;
     padding-top: 4vh;
+    margin-inline: -3vw;
 
     font-size: large;
 
@@ -410,6 +395,25 @@ textarea {
    footer div p {
     color: #a8a59c;
    }
+
+   @media (orientation: portrait) {
+    #desktop-menu {
+      display: none;
+    }
+    #mobile-menu {
+      display: block;
+    }
+    main .info * {
+      text-align: center;
+    }
+    main .buttons {
+      flex-direction: column;
+      margin-inline: 4rem;
+    }
+    main .buttons img {
+      min-width: 100%;
+    }
+  }
 
 /* ==========================================================================
    Helper classes
