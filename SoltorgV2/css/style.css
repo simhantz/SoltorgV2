@@ -399,6 +399,9 @@ textarea {
       display: block;
       margin-right: 2rem;
     }
+    #sökspråk {
+      /* display: none; */
+    }
     main {
       background-color: var(--html);
     }
