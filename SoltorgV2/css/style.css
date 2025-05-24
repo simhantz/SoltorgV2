@@ -121,7 +121,9 @@ textarea {
     padding-inline: 3vw;
    }
 
-
+   a {
+    text-decoration: none;
+   }
 
 
    header {
@@ -186,7 +188,6 @@ textarea {
 
    
    header .mid-row #desktop-menu{
-    gap: min
    }
    header .bottom-row nav ol{
     justify-content: space-around;
@@ -194,6 +195,38 @@ textarea {
 
    #mobile-menu {
     display: none;
+   }
+   #mobile-menu button {
+    background-color: hsla(0, 0%, 55%, 0);
+
+    border: none;
+    padding: 10px;
+   }
+   #mobile-menu button:hover {
+    background-color: hwb(0 55% 45% / 0.137);
+
+   }
+
+   #dropdown {
+    display: none;
+    background-color: var(--soltorg-mörkgul);
+    min-height: 500px;
+    margin-inline: -3vw;
+    padding: 6vw 3vw;
+    justify-items: center;
+    border-top: rgb(255, 255, 255) solid 1px;
+   }
+   #dropdown a {
+    display: block;
+    margin-inline: auto;
+    border-bottom: black solid 1px;
+    font-size: 2rem;
+    padding-left: 5%;
+    padding-block: 0.5em;
+   }
+   #dropdown a:hover {
+    background-color: hwb(0 55% 45% / 0.137);
+
    }
 
 
@@ -399,9 +432,6 @@ textarea {
       display: block;
       margin-right: 2rem;
     }
-    #sökspråk {
-      /* display: none; */
-    }
     main {
       background-color: var(--html);
     }
@@ -450,6 +480,76 @@ textarea {
     footer > * {
       margin-left: 20vw;
     }
+    .subsite main {
+      grid-area: 1 / 1 / 2 / 2;
+
+    }
+    .subsite main nav {
+      display: none;
+    }
+    .subsite main div {
+      
+    }
+  }
+
+
+  .subsite picture img {
+    cursor: pointer;
+   }
+  .subsite main {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr;
+    gap: 0;
+    /* background-color: blue; */
+  }
+  .subsite h1 {
+    padding: 1rem 2rem;
+  }
+  .subsite h2 {
+
+  }
+  .subsite h3 {
+    font-size: 1.8rem;
+    font-weight: 500;
+  }
+  .subsite main nav {
+    /* background-color: orange; */
+    grid-area: 1 / 1 / 2 / 2;
+  }
+  
+  .subsite main ol {
+    list-style: none;
+  }
+  .subsite main li {
+    border-bottom: rgba(112, 112, 112, 0.205) solid 1px;
+    min-height: 2em;
+    align-content: center;
+    padding-left: 1em;
+    font-size: 2rem;
+    font-weight: 400;
+  }
+
+  .subsite main div {
+    grid-area: 1 / 2 / 2 / 2;
+    /* background-color: red; */
+    padding-left: 1em;
+  }
+  .subsite section {
+    padding: 0.5vw 2vw;
+    margin-bottom: 2rem;
+  }
+  .subsite section ol {
+    list-style:disc;
+    padding: 0;
+    margin: 0;
+  }
+  .subsite section li {
+    list-style:disc;
+    padding: 0;
+    margin: 0;
+    font-size: 1.5rem;
+    border: none;
   }
 
 /* ==========================================================================

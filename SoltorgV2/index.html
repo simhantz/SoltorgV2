@@ -14,9 +14,9 @@
   <meta property="og:image" content="">
   <meta property="og:image:alt" content="">
 
-  <link rel="icon" href="/favicon.ico" sizes="any">
-  <link rel="icon" href="/icon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="icon.png">
+  <link rel="icon" href="../img/old/soltorglogo-desktop.jpg" sizes="any">
+  <!-- <link rel="icon" href="/icon.svg" type="image/svg+xml"> -->
+  <!-- <link rel="apple-touch-icon" href="icon.png"> -->
 
 
   <link rel="preconnect" href="https://fonts.bunny.net">
@@ -42,7 +42,7 @@
     <div class="mid-row"> 
       <nav>
         <picture>
-          <img src="img/soltorglogo-desktop-trans.png" alt="ute bild på soltorg">
+          <img src="img/soltorglogo-desktop-trans.png" alt="">
         </picture>
         <ol class="list" id="desktop-menu">
           <li>Utbildning</li>
@@ -55,7 +55,9 @@
           <li>Språk</li>
         </ol>
         <div id="mobile-menu">
-          <img src="img/icons8-menu.svg" alt="">
+          <button onclick="toggleMenu()">
+            <img src="/img/icons8-menu.svg" alt="meny">
+          </button>
         </div>
       </nav>
 
@@ -64,8 +66,8 @@
     <div class="bottom-row">
       <nav>
         <ol class="list">
-          <li><a href="/program/natur.html">Natur</a></li>
-          <li><a href="/program/teknik.html">Teknik</a></li>
+          <li><a href="/program/Naturvetenskap.html">Natur</a></li>
+          <li><a href="/program/Teknik.html">Teknik</a></li>
           <li>Hum</li>
         </ol>  
       </nav>
@@ -75,14 +77,21 @@
     
   </header>
 
-  <section class="background">
+  <section class="background" id="soltorg-image">
     <picture>
       <source media="(orientation: portrait)" srcset="../img/soltorg-mobile.jpg">
       <img src="../img/soltorg-desktop.jpg" alt="bild på soltorg">
     </picture>
   </section>
 
-  <main>
+  <nav id="dropdown" >        
+    <a href="#">Utbildning</a>
+    <a href="#">Är elev</a>
+    <a href="#">Bli elev</a>
+    <a href="#">Om Soltorg</a>
+  </nav>
+
+  <main id="main">
     <section class="info">
       <h1>Välkommen till Soltorg!</h1>
       <h2>Bli den du vill vara på Soltorgsgymnasiet!</h2>
@@ -120,8 +129,6 @@
         <iframe title="YouTube video player" loading="lazy"
           src="https://www.youtube.com/embed/W5dH8JeIwvI?si=2bDYsSw58IXHUl65">
         </iframe>
-        <p>DO this possibly for better thingy</p>
-        <p>https://www.youtube.com/watch?v=0U4368tKOEA</p>
       </section>
 
       <section class="misc">
@@ -139,7 +146,7 @@
           </div>
           <div class="map">
             <p>Hitta hit - Masergatan 20</p>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1965.125681215201!2d15.413722176864047!3d60.49265511736541!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46677e8e0bceddb5%3A0x1c00990e648ac44!2sSoltorgsgymnasiet!5e0!3m2!1ssv!2sse!4v1747638346490!5m2!1ssv!2sse" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe title="google maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1965.125681215201!2d15.413722176864047!3d60.49265511736541!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46677e8e0bceddb5%3A0x1c00990e648ac44!2sSoltorgsgymnasiet!5e0!3m2!1ssv!2sse!4v1747638346490!5m2!1ssv!2sse" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
         </div>
       </section>
